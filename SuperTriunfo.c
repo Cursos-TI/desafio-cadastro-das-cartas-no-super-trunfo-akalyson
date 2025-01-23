@@ -8,11 +8,13 @@ int main(){
     float area;
     float pib; 
     int npt;
+    float dp, pibpc;
 
-    printf("Digite o estado:\n");
+
+    printf("Digite o estado: (Uma letra)\n");
     scanf(" %c", &estado);
 
-    printf("Digite o codigo da carta:\n");
+    printf("Digite o codigo da carta: (Um numero e duas letras)\n");
     scanf(" %s", codigo);
 
     printf("Digite o nome da cidade:\n");
@@ -30,14 +32,19 @@ int main(){
     printf("Digite o numero de pontos turisticos da cidade:\n");
     scanf("%i", &npt);
 
+    dp = (float) (populacao / area);
+    pibpc = (double) (1000 * pib) / populacao;
+    pibpc = pibpc * 1000000;
+
     printf("Estado: %c\n", estado);
     printf("Codigo da Carta: %s\n", codigo);
     printf("Nome da Cidade: %s\n", nome);
     printf("Populacao: %i\n", populacao);
     printf("Area: %.2f kilometros quadrado\n", area);
+    printf("Densidade populacional: %.2f pessoas/km quadrado\n", dp);
     printf("PIB: %.2f Bilhoes de reais\n", pib);
+    printf("PIB per Capita: %.2f reais\n", pibpc);
     printf("Numero de pontos turisticos: %i\n", npt);
 
     return 0;
-
 }
